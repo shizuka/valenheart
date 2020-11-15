@@ -1,0 +1,220 @@
+/* 
+ * Valenheart Stylesheet
+ * 2020-Sep
+ */
+/*
+ * Uses Sass Web Fonts Mixin
+ * (c)2014 Ross Penman - https://github.com/penman/Sass-Web-Fonts
+ * MIT License
+ */
+@import url("//fonts.googleapis.com/css?family=Lusitana|Caveat|Amatic%20SC|Source%20Code%20Pro");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after, nav ul:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 1em;
+}
+
+.floatright {
+  float: right;
+  margin-left: 1em;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Lusitana", serif;
+  color: #46433a;
+  background-color: #eac99a;
+  background-image: url("/assets/img/sand-1.jpg");
+  font-size: 1em;
+}
+
+header {
+  background-image: url("/assets/img/oceanheader-flat.png");
+  background-position: bottom;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  margin-bottom: -3em;
+  padding-bottom: 5em;
+  position: relative;
+  z-index: 1;
+}
+
+#headcontent {
+  text-align: center;
+}
+
+.logo {
+  padding: 1em 0 0;
+}
+
+.logo img {
+  width: 100%;
+}
+
+nav {
+  margin-bottom: 3em;
+}
+
+nav ul {
+  padding: 0.5em 1em;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(5, 31, 52, 0.7);
+  border-radius: 1.5em;
+}
+
+nav li {
+  margin: 0;
+  padding: 0.25em 0.5em;
+  list-style-type: none;
+  list-style-position: outside;
+  display: inline;
+}
+
+nav a, nav a:visited {
+  color: #f4f5f5;
+  font-family: "Caveat", "Lusitana", serif;
+  font-size: 1.5em;
+}
+
+nav a:hover, nav a:visited:hover {
+  color: #01a9c1;
+}
+
+nav a.here, nav a:visited.here {
+  color: #eac99a;
+  text-decoration: none;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+main {
+  background-color: #f6ede4;
+  padding: 2.5em 1em 1em;
+  margin-bottom: 2em !important;
+}
+
+footer {
+  text-align: center;
+  background-color: #f6ede4;
+  color: #818792;
+  font-size: 0.8em;
+  margin: 3em 0 0;
+  padding: 1em 0 0;
+  border-top: 2px solid #eac99a;
+}
+
+p {
+  margin: 1em;
+}
+
+ol, ul {
+  margin: 1em 2.5em;
+  list-style-position: outside;
+  list-style-image: url("/assets/img/bulleta.gif");
+}
+
+ol li, ul li {
+  line-height: 1.5em;
+}
+
+ol li ul, ul li ul {
+  margin: 0 1.5em;
+  list-style-image: url("/assets/img/sumbul1a.gif");
+}
+
+ol {
+  list-style-image: none;
+  list-style-type: decimal;
+}
+
+blockquote {
+  background-color: #e6dbcf;
+  margin: 1em;
+  padding: 1em;
+}
+
+figure {
+  margin: 1em;
+  padding: 0.8em;
+  background-color: #e6dbcf;
+  display: inline-block;
+}
+
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+pre {
+  margin: 1em;
+  padding: 1em;
+  background-color: #e6dbcf;
+}
+
+code {
+  background-color: #e6dbcf;
+  display: inline-block;
+  padding: 3px 5px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
+}
+
+hr {
+  border: 1px solid #7d9dab;
+  margin: 1em;
+}
+
+h1, h2, h3 {
+  font-family: "Amatic SC", "Lusitana", serif;
+  font-weight: bold;
+  color: #027495;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+a, a:visited {
+  color: #1088a0;
+}
+
+a:hover, a:visited:hover {
+  color: #78b2c4;
+}
+
+/* MEDIA BREAKPOINTS *****************/
+@media (min-width: 768px) {
+  .wraproot {
+    margin: auto;
+    width: 45em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
