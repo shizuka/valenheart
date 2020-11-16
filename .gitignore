@@ -1,7 +1,23 @@
+### Jekyll ###
 _site/
 .sass-cache/
 .jekyll-cache/
-.jekyll-metadata
-Gemfile
-Gemfile.lock
+.jekyll-metadata/
+
+### macOS ###
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+### Windows ###
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.ini
+
+/.bundle/
+/vendor/bundle
+.ruby-version
+Gemfile.lock

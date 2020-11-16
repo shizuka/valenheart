@@ -1,0 +1,280 @@
+/* 
+ * Valenheart Stylesheet
+ * 2020-Sep
+ */
+
+ @import 'mixins';
+
+// PALETTES *************************//
+//colorpalettes.net #2141
+$c-2141-sand-dark: #cfad89;
+$c-2141-sand-lite: #cfc1af;
+$c-2141-teal-dark: #1088a0;
+$c-2141-teal-lite: #78b2c4;
+$c-2141-gray: #818792;
+
+//colorpalettes.net #1873
+$c-1873-deep: #051f34;
+$c-1873-dark: #027495;
+$c-1873-lite: #01a9c1;
+$c-1873-gray: #bad6db;
+$c-1873-white: #f4f5f5;
+
+//colorpalettes.net #3338
+$c-3338-white: #f6ede4;
+
+//vortalcord
+$c-vc-sand-dark: #eac99a;
+$c-vc-sand-lite: #efe4bd;
+
+
+// COLORS ***************************//
+$c-bg-header: $c-1873-dark;
+$c-bg-main: $c-3338-white;
+$c-bg-main-margins: $c-vc-sand-dark;
+$c-bg-bq: mix($c-3338-white, $c-2141-sand-lite, $weight: 60%);
+
+$c-text: #46433a;
+$c-text-lite: $c-2141-gray;
+$c-link: $c-1873-lite;
+$c-hx: $c-1873-dark;
+
+$c-bg-nav: $c-1873-deep;
+$c-link: $c-2141-teal-dark;
+$c-link-hover: $c-2141-teal-lite;
+$c-link-nav: $c-1873-white;
+$c-link-nav-sep: $c-2141-gray;
+$c-link-nav-here: $c-vc-sand-dark;
+$c-link-nav-hover: $c-1873-lite;
+
+$c-border: mix($c-2141-gray, $c-2141-teal-lite);
+$c-hr: $c-border;
+
+// FONTS ****************************//
+$f-body:      font("Lusitana"), serif;
+$f-nav:       font("Caveat"), $f-body;
+$f-heading:   font("Amatic SC"), $f-body;
+$f-code:      font("Source Code Pro"), monospace;
+
+// SIZES ****************************//
+$s-text: 1em;
+
+// STYLES ***************************//
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 1em;
+}
+
+.floatright {
+  float: right;
+  margin-left: 1em;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: $f-body;
+  color: $c-text;
+  background-color: $c-bg-main-margins;
+  background-image: url("/assets/img/sand-1.jpg");
+  font-size: $s-text;
+}
+
+header {
+  background-image: url("/assets/img/oceanheader-flat.png");
+  background-position: bottom;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  margin-bottom: -3em;
+  padding-bottom: 5em;
+  position: relative;
+  z-index: 1;
+}
+
+#headcontent {
+  //position: relative;
+  //z-index: 2;
+  text-align: center;
+}
+
+.logo {
+  padding: 1em 0 0;
+  img {
+    width: 100%;
+  }
+}
+
+nav {
+  margin-bottom: 3em;
+  ul {
+    padding: 0.5em 1em;
+    display: inline-block;
+    @extend .clearfix;
+    text-align: center;
+    background-color: transparentize($color: $c-bg-nav, $amount: 0.3);
+    @include border-radius($br: 1.5em);
+  }
+  li {
+    margin: 0;
+    padding: 0.25em 0.5em;
+    list-style-type: none;
+    list-style-position: outside;
+    display: inline;
+  }
+  a, a:visited {
+    color: $c-link-nav;
+    font-family: $f-nav;
+    font-size: 1.5em;
+    &:hover {
+      color: $c-link-nav-hover;
+    }
+    &.here {
+      color: $c-link-nav-here;
+      text-decoration: none;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+  }
+}
+
+main {
+  background-color: $c-bg-main;
+  padding: 2.5em 1em 1em;
+  margin-bottom: 6em !important;
+}
+
+footer {
+  text-align: center;
+  background-color: $c-bg-main;
+  color: $c-2141-gray;
+  font-size: 0.8em;
+  margin: 3em 0 0;
+  padding: 1em 0 0;
+  border-top: 2px solid $c-bg-main-margins;
+}
+
+p {
+  margin: 1em;
+}
+
+ol, ul {
+  margin: 1em 2.5em;
+  list-style-position: outside;
+  list-style-image: url('/assets/img/bulleta.gif');
+
+  li {
+    line-height: 1.5em;
+
+    ul {
+      margin: 0 1.5em;
+      list-style-image: url('/assets/img/sumbul1a.gif');
+    }
+  }
+}
+
+ol {
+  list-style-image: none;
+  list-style-type: decimal;
+}
+
+blockquote {
+  background-color: $c-bg-bq;
+  margin: 1em;
+  padding: 1em;
+}
+
+figure {
+  margin: 1em;
+  padding: 0.8em;
+  background-color: $c-bg-bq;
+  display: inline-block;
+
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+}
+
+pre {
+  margin: 1em;
+  padding: 1em;
+  background-color: $c-bg-bq;
+}
+
+code {
+  background-color: $c-bg-bq;
+  display: inline-block;
+  padding: 3px 5px;
+  font-family: $f-code;
+  font-size: 0.8em;
+}
+
+hr {
+  border: 1px solid $c-hr;
+  margin: 1em;
+}
+
+h1, h2, h3 {
+  font-family: $f-heading;
+  font-weight: bold;
+  color: $c-hx;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+a, a:visited {
+  color: $c-link;
+
+  &:hover {
+    color: $c-link-hover;
+  }
+}
+
+/* MEDIA BREAKPOINTS *****************/
+// mobile - 480px and up
+// logo and nav squeeze in, content fill width
+@media (min-width: 480px) {
+
+}
+
+// full - 768px and up
+// Shizuka (O) Valenheart, content fixed width 600px
+@media (min-width: 768px) {
+  .wraproot {
+    margin: auto;
+    width: 45em;
+  }
+}
+
+@include web-fonts(map-values($fonts));

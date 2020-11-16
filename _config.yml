@@ -1,0 +1,40 @@
+#######################################
+# Valenheart Site Config
+#######################################
+title: valenheart
+description: a mermaid bunny's nest
+url: "https://valenheart.com"
+baseurl: ""
+keywords: ["furry", "mermaid", "bunny", "writing", "blog", "short stories"]
+
+timezone: America/Chicago
+markdown: kramdown
+highligher: rouge
+excerpt_separator: <!--more-->
+permalink: /articles/:year-:month/:title
+
+exclude: ["*.ini", "Gemfile", "Gemfile.lock", "README.md", "package.json"]
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+sass:
+  sass_dir: _sass
+
+port: 5500
+host: 0.0.0.0
+livereload: true
+
+
+#######################################
+# Defaults
+#######################################
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
