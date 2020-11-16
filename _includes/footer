@@ -1,0 +1,6 @@
+<footer>
+  <img src="/assets/img/madewithmac.png" style="float:left" alt="made with mac os">
+  <img src="/assets/img/netscape.png" style="float:right" alt="best viewed in any browser, but secretly netscape">
+  &copy; 2020 jessica valenheart &mdash; page src &mdash; powered by <a href="https://jekyllrb.com">jekyll</a><br>
+  any views expressed are not representative of any employer<br>
+</footer>

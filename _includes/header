@@ -1,0 +1,17 @@
+<header>
+  <div id="headcontent" class="wraproot">
+    <div class="logo">
+     <img src="/assets/img/logo-center.png" alt="Shizuka Valenheart">
+    </div>
+    <nav>
+      <ul>
+        <img src="/assets/img/underconstruction.gif" alt="under construction banner, because it's 1998 around here"><br>
+        <li><a href="#" class="here">home</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">mermaid</a></li>
+        <li><a href="#" class="">furhaven</a></li>
+        <li><a href="#">projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
