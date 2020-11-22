@@ -231,10 +231,10 @@ blockquote {
 }
 
 figure {
-  margin: 1em;
+  margin: 1em auto;
   padding: 0.8em;
   background-color: $c-bg-bq;
-  display: inline-block;
+  display: table;
 
   img {
     max-width: 100%;
@@ -305,7 +305,7 @@ a, a:visited {
   header {
     padding-bottom: 3em;
   }
-  
+
   nav {
     margin-bottom: 0;
   }
