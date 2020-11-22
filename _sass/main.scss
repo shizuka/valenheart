@@ -58,6 +58,11 @@ $f-code:      font("Source Code Pro"), monospace;
 
 // SIZES ****************************//
 $s-text: 1em;
+$s-nav: 1.5em;
+$s-h1: 2.5em;
+$s-h2: 2em;
+$s-h3: 1.5em;
+$s-small: 0.8em;
 
 // STYLES ***************************//
 * {
@@ -100,11 +105,15 @@ body {
   font-size: $s-text;
 }
 
+.wraproot {
+  margin: auto;
+  width: 45em;
+}
+
 header {
   background-image: url("/assets/img/oceanheader-flat.png");
   background-position: bottom;
   background-size: auto 100%;
-  background-repeat: repeat-x;
   margin-bottom: -3em;
   padding-bottom: 5em;
   position: relative;
@@ -144,14 +153,14 @@ nav {
   a, a:visited {
     color: $c-link-nav;
     font-family: $f-nav;
-    font-size: 1.5em;
+    font-size: $s-nav;
     &:hover {
       color: $c-link-nav-hover;
     }
     &.here {
       color: $c-link-nav-here;
       text-decoration: none;
-      font-size: 1.6em;
+      font-size: $s-nav + 0.1em;
       font-weight: bold;
     }
   }
@@ -164,13 +173,31 @@ main {
 }
 
 footer {
-  text-align: center;
   background-color: $c-bg-main;
   color: $c-2141-gray;
-  font-size: 0.8em;
+  font-size: $s-small;
   margin: 3em 0 0;
   padding: 1em 0 0;
   border-top: 2px solid $c-bg-main-margins;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
+}
+#bugmac {
+  order: 0;
+  text-align: left;
+}
+#bugnet {
+  order: 2;
+  text-align: right;
+}
+#foottext {
+  order: 1;
+  flex-grow: 2;
+  text-align: center;
 }
 
 p {
@@ -178,7 +205,7 @@ p {
 }
 
 ol, ul {
-  margin: 1em 2.5em;
+  margin: 1em 3em;
   list-style-position: outside;
   list-style-image: url('/assets/img/bulleta.gif');
 
@@ -209,10 +236,14 @@ figure {
   background-color: $c-bg-bq;
   display: inline-block;
 
+  img {
+    max-width: 100%;
+  }
+
   figcaption {
     text-align: center;
     font-style: italic;
-    font-size: 0.8em;
+    font-size: $s-small;
   }
 }
 
@@ -220,6 +251,7 @@ pre {
   margin: 1em;
   padding: 1em;
   background-color: $c-bg-bq;
+  overflow-x: scroll;
 }
 
 code {
@@ -227,7 +259,7 @@ code {
   display: inline-block;
   padding: 3px 5px;
   font-family: $f-code;
-  font-size: 0.8em;
+  font-size: $s-small;
 }
 
 hr {
@@ -242,15 +274,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: $s-h1;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: $s-h2;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: $s-h3;
 }
 
 a, a:visited {
@@ -262,18 +294,59 @@ a, a:visited {
 }
 
 /* MEDIA BREAKPOINTS *****************/
-// mobile - 480px and up
-// logo and nav squeeze in, content fill width
-@media (min-width: 480px) {
 
-}
-
-// full - 768px and up
-// Shizuka (O) Valenheart, content fixed width 600px
-@media (min-width: 768px) {
+// mobile - 768px and below
+@media (max-width: 50em) {
   .wraproot {
-    margin: auto;
-    width: 45em;
+    margin: 0;
+    width: auto;
+  }
+
+  header {
+    padding-bottom: 3em;
+  }
+  
+  nav {
+    margin-bottom: 0;
+  }
+
+  figure {
+    margin: 0.2em;
+    padding: 0.8em;
+  }
+
+  pre {
+    margin: 0.2em;
+    padding: 0.8em;
+  }
+
+  p {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+  }
+
+  blockquote {
+    padding: 0.8em;
+    margin: 0.2em;
+  }
+
+  ol,ul {
+    margin: 1em 2.5em;
+  }
+
+  #foottext {
+    order: 0;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  #bugmac {
+    order: 1;
+  }
+  #bugnet {
+    order: 2;
+  }
+  main {
+    margin-bottom: 2em !important;
   }
 }
 

@@ -1,4 +1,4 @@
-![the mermaid bunny herself](/assets/img/merbun-trans.png){: .floatright style="width: 15em"}
+![the mermaid bunny herself](/assets/img/merbun-trans.png){: .floatright style="width: 33%"}
 
 # Heading 1
 Lorem [ipsum][link1] dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum nibh dui, consequat tempus orci ultrices nec. Etiam volutpat varius pulvinar. Phasellus ut blandit elit. Donec consectetur libero at nisi semper tincidunt. Praesent erat elit, imperdiet nec hendrerit sed, tincidunt sed lectus. Mauris vel tempus purus. Sed in consectetur risus. Nullam facilisis molestie ornare. Praesent libero neque, pharetra vitae magna id, faucibus mattis ligula. In posuere est sed massa efficitur malesuada. Vestibulum dictum dignissim ullamcorper. Curabitur ut egestas arcu, et malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc tempus nibh vel bibendum venenatis. Sed ut nunc arcu. Etiam risus velit, volutpat ac risus in, ultricies euismod neque.
@@ -29,7 +29,7 @@ Duis sodales lacus ac arcu tempor viverra. Pellentesque a odio ut diam mattis rh
 > fizz buzz fuzz fluff sof
 
 <figure>
-![](https://placekitten.com/g/300/300)
+<img src="https://placekitten.com/300/300">
 <figcaption>A cute kitty</figcaption>
 </figure>
 
@@ -53,6 +53,7 @@ Fusce accumsan purus massa, ut porttitor justo iaculis vel. Nullam `luctus liber
 public static void main(String[] args) {
   int x = 0;
   x++;
+  /*good lord this is such a long string it's going to overflow!*/
   return x; //oh hush
 }
 ```
