@@ -1,0 +1,7 @@
+{% capture pagesrc %}{{ site.github.repository_url }}/raw/master/{{ page.path }}{% endcapture %}
+<footer>
+  <img src="/assets/img/madewithmac.png" id="bugmac" alt="made with mac os">
+  <img src="/assets/img/netscape.png" id="bugnet" alt="best viewed in any browser, but secretly netscape">
+  <div id="foottext">&copy; {{ site.time | date: '%Y' }} jessica valenheart &mdash; <a href="{{pagesrc}}">page src</a> &mdash; powered by <a href="https://jekyllrb.com">jekyll</a><br>
+  any views expressed are not representative of any employer</div>
+</footer>

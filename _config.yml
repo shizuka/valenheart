@@ -5,7 +5,15 @@ title: valenheart
 description: a mermaid bunny's nest
 url: "https://valenheart.com"
 baseurl: ""
-keywords: ["furry", "mermaid", "bunny", "writing", "blog", "short stories"]
+keywords: [
+  "furry",
+  "mermaid",
+  "mermaiding",
+  "bunny",
+  "writing",
+  "blog",
+  "short stories"
+]
 
 timezone: America/Chicago
 markdown: kramdown
