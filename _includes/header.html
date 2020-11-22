@@ -6,11 +6,11 @@
     <nav>
       <ul>
         <img src="/assets/img/underconstruction.gif" style="max-width:100%" alt="under construction banner, because it's 1998 around here"><br>
-        <li><a href="#" class="here">home</a></li>
-        <li><a href="#">gallery</a></li>
-        <li><a href="#">mermaid</a></li>
-        <li><a href="#" class="">furhaven</a></li>
-        <li><a href="#">projects</a></li>
+        <li><a href="/" {% if page.here == "home" %}class="here{% if page.this %} this{% endif %}"{% endif %}>home</a></li>
+        <li><a href="#" {% if page.here == "gallery" %}class="here{% if page.this %} this{% endif %}"{% endif %}>gallery</a></li>
+        <li><a href="#" {% if page.here == "mermaid" %}class="here{% if page.this %} this{% endif %}"{% endif %}>mermaid</a></li>
+        <li><a href="#" {% if page.here == "furhaven" %}class="here{% if page.this %} this{% endif %}"{% endif %}>furhaven</a></li>
+        <li><a href="#" {% if page.here == "projects" %}class="here{% if page.this %} this{% endif %}"{% endif %}>projects</a></li>
       </ul>
     </nav>
   </div>

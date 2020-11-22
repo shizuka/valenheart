@@ -93,6 +93,10 @@ $s-small: 0.8em;
   margin-left: 1em;
 }
 
+.smol {
+  font-size: $s-small;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -159,9 +163,11 @@ nav {
     }
     &.here {
       color: $c-link-nav-here;
-      text-decoration: none;
-      font-size: $s-nav + 0.1em;
+      font-size: $s-nav + 0.25em;
       font-weight: bold;
+    }
+    &.this {
+      text-decoration: none;
     }
   }
 }
