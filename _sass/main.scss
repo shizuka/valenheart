@@ -4,6 +4,9 @@
  */
 
  @import 'mixins';
+ @import 'fa/fontawesome.scss';
+ @import 'fa/solid.scss';
+ @import 'fa/brands.scss';
 
 // PALETTES *************************//
 //colorpalettes.net #2141
@@ -356,4 +359,63 @@ a, a:visited {
   }
 }
 
+.contacts {
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  align-content: space-between;
+  width: 60%;
+  li {
+    margin: 0.4em 0.4em;
+    display: block;
+    flex: 0 1 auto;
+
+    a, a:visited {
+      display: flex;
+      align-items: center;
+      background-color: $c-bg-header;
+      color: $c-bg-main;
+      text-decoration: none;
+      padding: 0.5em 0.5em;
+      @include border-radius($br: 1em);
+
+      &:hover {
+        background-color: $c-2141-teal-lite;
+      }
+    }
+
+    .brand {
+      display: block;
+      text-decoration: none;
+      color: $c-bg-main-margins;
+      font-size: $s-h1;
+    }
+    .link {
+      display: block;
+      font-size: $s-text + 0.2em;
+      padding-left: 0.4em;
+    }
+    &.discord {
+      .brand {
+        color: $c-text;
+      }
+      .link {
+        color: $c-text;
+        text-decoration: none;
+      }
+      a {
+        background-color: $c-bg-main-margins;
+        color: $c-text;
+
+        &:hover {
+          background-color: $c-bg-main-margins;
+        }
+      }
+    }
+  }
+}
+
+//include any web fonts used today
 @include web-fonts(map-values($fonts));
