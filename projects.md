@@ -9,6 +9,6 @@ permalink: /projects
 
 FIXME: big list notation
 
- - [Cavern Mixes](cvmix.html)
+ - [Cavern Mixes](/cvmix)
  - Bolus Advisor
  - Hikari IRC Bot

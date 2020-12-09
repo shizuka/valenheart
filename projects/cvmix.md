@@ -1,6 +1,8 @@
 ---
 title: cavern mixes
 here: projects
+
+permalink: /cvmix
 ---
 
 <link rel="stylesheet" href="/assets/css/cvmix.css">
