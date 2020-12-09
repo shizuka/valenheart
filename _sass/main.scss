@@ -8,7 +8,7 @@
  @import 'fa/solid.scss';
  @import 'fa/brands.scss';
 
-// PALETTES *************************//
+// PALETTES **************************//
 //colorpalettes.net #2141
 $c-2141-sand-dark: #cfad89;
 $c-2141-sand-lite: #cfc1af;
@@ -31,7 +31,7 @@ $c-vc-sand-dark: #eac99a;
 $c-vc-sand-lite: #efe4bd;
 
 
-// COLORS ***************************//
+// COLORS ****************************//
 $c-bg-header: $c-1873-dark;
 $c-bg-main: $c-3338-white;
 $c-bg-main-margins: $c-vc-sand-dark;
@@ -53,13 +53,13 @@ $c-link-nav-hover: $c-1873-lite;
 $c-border: mix($c-2141-gray, $c-2141-teal-lite);
 $c-hr: $c-border;
 
-// FONTS ****************************//
+// FONTS *****************************//
 $f-body:      font("Lusitana"), serif;
 $f-nav:       font("Caveat"), $f-body;
 $f-heading:   font("Amatic SC"), $f-body;
 $f-code:      font("Source Code Pro"), monospace;
 
-// SIZES ****************************//
+// SIZES *****************************//
 $s-text: 1em;
 $s-nav: 1.5em;
 $s-h1: 2.5em;
@@ -67,7 +67,7 @@ $s-h2: 2em;
 $s-h3: 1.5em;
 $s-small: 0.8em;
 
-// STYLES ***************************//
+// STYLES ****************************//
 * {
   margin: 0;
   padding: 0;
@@ -161,7 +161,7 @@ nav {
     color: $c-link-nav;
     font-family: $f-nav;
     font-size: $s-nav;
-    &:hover {
+    &:hover, &.here:hover {
       color: $c-link-nav-hover;
     }
     &.here {
@@ -302,7 +302,7 @@ a, a:visited {
   }
 }
 
-/* MEDIA BREAKPOINTS *****************/
+/* MEDIA BREAKPOINTS ******************/
 
 // mobile - 768px and below
 @media (max-width: 50em) {
@@ -359,8 +359,11 @@ a, a:visited {
   }
 }
 
+/* PAGE SPECIFICS *********************/
+
+// homepage contacts list
 .contacts {
-  margin: 1em 0;
+  margin: 1em auto;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -370,7 +373,7 @@ a, a:visited {
   li {
     margin: 0.4em 0.4em;
     display: block;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
 
     a, a:visited {
       display: flex;
