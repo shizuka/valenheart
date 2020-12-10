@@ -35,7 +35,8 @@ $c-vc-sand-lite: #efe4bd;
 $c-bg-header: $c-1873-dark;
 $c-bg-main: $c-3338-white;
 $c-bg-main-margins: $c-vc-sand-dark;
-$c-bg-bq: mix($c-3338-white, $c-2141-sand-lite, $weight: 60%);
+//$c-bg-bq: mix($c-3338-white, $c-2141-sand-lite, $weight: 60%);
+$c-bg-bq: #e6dbcf;
 
 $c-text: #46433a;
 $c-text-lite: $c-2141-gray;
@@ -179,6 +180,9 @@ main {
   background-color: $c-bg-main;
   padding: 2.5em 1em 1em;
   margin-bottom: 6em !important;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
 footer {
@@ -188,6 +192,7 @@ footer {
   margin: 3em 0 0;
   padding: 1em 0 0;
   border-top: 2px solid $c-bg-main-margins;
+  flex: 0 0 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -369,7 +374,6 @@ a, a:visited {
   align-items: baseline;
   justify-content: flex-start;
   align-content: space-between;
-  width: 60%;
   li {
     margin: 0.4em 0.4em;
     display: block;
@@ -418,6 +422,30 @@ a, a:visited {
       }
     }
   }
+}
+
+#homecontent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#homebun {
+  max-width: 15em;
+
+  img {
+    width: 100%;
+  }
+}
+
+article {
+  max-width: 30em;
+  flex: 0 1 30em;
+}
+
+.sidebar {
+  flex: 1;
 }
 
 //include any web fonts used today

@@ -1,5 +1,6 @@
 ---
 title: markdown sampler
+layout: article
 ---
 
 ![the mermaid bunny herself](/assets/img/merbun-trans.png){: .floatright style="width: 33%"}
