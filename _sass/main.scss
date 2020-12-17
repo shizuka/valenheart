@@ -439,6 +439,7 @@ a, a:visited {
   }
 }
 
+//layout post
 article {
   max-width: 30em;
   flex: 0 1 30em;
@@ -446,6 +447,66 @@ article {
 
 .sidebar {
   flex: 1;
+}
+
+.biglist {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 1em;
+  max-width: 30em;
+
+  li {
+    margin-bottom: 2em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    .icon {
+      flex: 0 1 auto;
+      margin-right: 16px;
+    }
+
+    i.icon {
+      font-size: 3em;
+      color: $c-text !important;
+    }
+
+    img.icon {
+      width: 3em;
+      margin-left: 0.25em;
+    }
+
+    h2 {
+      flex: 1 1 auto;
+      align-self: center;
+      border-bottom: 2px solid $c-border;
+      padding-bottom: 0.2em;
+    }
+    
+    a, a:visited {
+      text-decoration: none;
+      display: flex;
+      width: 100%;
+
+      &:hover h2 {
+        color: $c-link-hover;
+        border-color: $c-link-hover;
+      }
+    }
+
+    p {
+      flex: 0 1 100%;
+      margin: 0.25em;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
 }
 
 //include any web fonts used today
